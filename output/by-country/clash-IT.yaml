@@ -5,13 +5,6 @@ mode: rule
 log-level: info
 proxies:
 - name: 🇮🇹 意大利 (Italy) 01 - xiaohe
-  type: ss
-  server: 57.131.48.45
-  port: 8388
-  cipher: aes-256-gcm
-  password: itzvpn@321
-  udp: true
-- name: 🇮🇹 意大利 (Italy) 02 - xiaohe
   type: vless
   server: 57.131.38.163
   port: 2053
@@ -22,21 +15,26 @@ proxies:
   reality-opts:
     public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
   servername: www.apple.com
-  client-fingerprint: random
+  client-fingerprint: chrome
+- name: 🇮🇹 意大利 (Italy) 02 - xiaohe
+  type: ss
+  server: 57.131.48.45
+  port: 8388
+  cipher: aes-256-gcm
+  password: itzvpn@321
+  udp: true
 - name: 🇮🇹 意大利 (Italy) 03 - xiaohe
   type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
+  server: 57.131.38.163
+  port: 2053
+  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
   udp: true
   tls: true
   skip-cert-verify: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?TELEGRAM--v2ray_configs_pools?ed
-    headers:
-      Host: lucasjow.us.ci
+  reality-opts:
+    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
+  servername: www.apple.com
+  client-fingerprint: chrome
 - name: 🇮🇹 意大利 (Italy) 04 - xiaohe
   type: vless
   server: 204.216.216.23
@@ -45,72 +43,6 @@ proxies:
   udp: true
   tls: false
   skip-cert-verify: true
-- name: 🇮🇹 意大利 (Italy) 05 - xiaohe
-  type: ss
-  server: 185.164.175.81
-  port: 19999
-  cipher: aes-256-gcm
-  password: ZRpgaBeGxtENIXgvhpkZBKz9GnWRS2dYcx9O+a2iwN4=
-  udp: true
-- name: 🇮🇹 意大利 (Italy) 06 - xiaohe
-  type: vless
-  server: 188.114.98.0
-  port: 443
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /?Telegram---bored_vpn
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇮🇹 意大利 (Italy) 07 - xiaohe
-  type: ss
-  server: 57.131.48.45
-  port: 8388
-  cipher: aes-256-gcm
-  password: itzvpn@321
-  udp: true
-- name: 🇮🇹 意大利 (Italy) 08 - xiaohe
-  type: vless
-  server: 188.114.97.6
-  port: 443
-  uuid: e6df2095-a73c-4043-8693-8d5a03686870
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: lucasjow.us.ci
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: lucasjow.us.ci
-- name: 🇮🇹 意大利 (Italy) 09 - xiaohe
-  type: vless
-  server: 57.131.38.163
-  port: 2053
-  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
-  servername: www.apple.com
-  client-fingerprint: chrome
-- name: 🇮🇹 意大利 (Italy) 10 - xiaohe
-  type: vless
-  server: 57.131.38.163
-  port: 2053
-  uuid: d4b08cd6-0903-411a-9dac-45dbdf5c9712
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  reality-opts:
-    public-key: Ej2H5ucT7qKegYcT8wODdlxa-cLHr7F4hDVUHzAhcnc
-  servername: www.apple.com
-  client-fingerprint: chrome
 proxy-groups:
 - name: PROXIES
   type: select
@@ -120,12 +52,6 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 02 - xiaohe
   - 🇮🇹 意大利 (Italy) 03 - xiaohe
   - 🇮🇹 意大利 (Italy) 04 - xiaohe
-  - 🇮🇹 意大利 (Italy) 05 - xiaohe
-  - 🇮🇹 意大利 (Italy) 06 - xiaohe
-  - 🇮🇹 意大利 (Italy) 07 - xiaohe
-  - 🇮🇹 意大利 (Italy) 08 - xiaohe
-  - 🇮🇹 意大利 (Italy) 09 - xiaohe
-  - 🇮🇹 意大利 (Italy) 10 - xiaohe
 - name: AUTO
   type: url-test
   url: https://www.google.com/generate_204
@@ -135,11 +61,5 @@ proxy-groups:
   - 🇮🇹 意大利 (Italy) 02 - xiaohe
   - 🇮🇹 意大利 (Italy) 03 - xiaohe
   - 🇮🇹 意大利 (Italy) 04 - xiaohe
-  - 🇮🇹 意大利 (Italy) 05 - xiaohe
-  - 🇮🇹 意大利 (Italy) 06 - xiaohe
-  - 🇮🇹 意大利 (Italy) 07 - xiaohe
-  - 🇮🇹 意大利 (Italy) 08 - xiaohe
-  - 🇮🇹 意大利 (Italy) 09 - xiaohe
-  - 🇮🇹 意大利 (Italy) 10 - xiaohe
 rules:
 - MATCH,PROXIES
